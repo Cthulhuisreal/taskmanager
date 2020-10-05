@@ -1,4 +1,4 @@
-<h1><p align="center"Task manager</p></h1><br>
+<strong><p align="center"Task manager</p></strong><br>
 Персонализированный сервиc, позволяющий пользователю ставить себе задачи, отражать в системе изменение их статуса и просматривать историю задач.
 
 Сервис написан на python3 с использованием веб-фреймворка Django и Django REST Framework (DRF)
