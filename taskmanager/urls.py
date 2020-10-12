@@ -1,6 +1,7 @@
-from django.contrib import admin
-from django.urls import path, include
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from django.urls import path
+from django.urls import include
+from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework_simplejwt.views import TokenRefreshView
 
 
 api_urlpatterns = [

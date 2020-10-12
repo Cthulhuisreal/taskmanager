@@ -26,6 +26,7 @@ class Task(models.Model):
 # Фильтрация задач по статусу и запланированной дате завершения
 class TaskFilter(filters.FilterSet):
     name = filters.CharFilter(lookup_expr='iexact')
+
     class Meta:
         model = Task
         fields = ['status', 'estimated_date']
