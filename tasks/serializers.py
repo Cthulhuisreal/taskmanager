@@ -1,14 +1,6 @@
 from rest_framework import serializers
 from tasks.models import Task
 
-# Возможные статусы задачи
-TASK_STATUS = (
-    ('n', 'Новая задача'),
-    ('p', 'Запланированная задача'),
-    ('i', 'Задача в работе'),
-    ('f', 'Завершенная задача'),
-)
-
 
 # Сериализатор записей истории изменения задачи
 class HistoricalRecordField(serializers.ListField):

@@ -2,8 +2,6 @@ from rest_framework import generics
 from tasks.models import Task
 from tasks.serializers import TaskSerializer
 from rest_framework import permissions
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
 
 
 # Список всех задач пользователя
@@ -25,10 +23,3 @@ class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
     permission_classes = [permissions.IsAuthenticated]
-
-
-# API энтрипойнт
-@api_view(['GET'])
-def api_root(request, format=None):
-    return Response({
-    })

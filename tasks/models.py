@@ -8,7 +8,7 @@ class Task(models.Model):
     history = HistoricalRecords()
     created = models.DateTimeField(auto_now_add=True)
     responsible = models.ForeignKey('auth.User', related_name='tasks', on_delete=models.CASCADE)
-    title = models.CharField(max_length=100, default='')
+    title = models.CharField(max_length=100, null=False, blank=False, default='Task')
     description = models.TextField()
     estimated_date = models.DateField(null=True, blank=True)
     TASK_STATUS = (

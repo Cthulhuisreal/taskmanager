@@ -1,5 +1,6 @@
 from django.urls import path
 from django.urls import include
+from django.views.generic import RedirectView
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework_simplejwt.views import TokenRefreshView
 
@@ -10,7 +11,8 @@ api_urlpatterns = [
 
 
 urlpatterns = [
-    path('', include('tasks.urls')),
+    path('', RedirectView.as_view(url='/mytasks/', permanent=True)),
+    path('mytasks/', include('tasks.urls')),
     # Регистрация в сервисе
     path('api/v1/', include(api_urlpatterns), name='register'),
     # Получение, обновление токенов

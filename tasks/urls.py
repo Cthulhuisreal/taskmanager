@@ -4,6 +4,5 @@ from tasks import views
 
 # API эндпоинты
 urlpatterns = format_suffix_patterns([
-    path('', views.api_root),
-    path('mytasks/', views.MyTaskList.as_view(), name='mytask-list'),
+    path('', views.MyTaskList.as_view(), name='mytask-list'),
 ])
